@@ -25,5 +25,8 @@
 
 # project directory
 target/
+logs/
 
-
+# tmp file
+# mac finder produce this
+.DS_Store
