@@ -1,9 +1,0 @@
-pers/selton/vertx/Test.class
-pers/selton/vertx/service/impl/UserServiceImpl.class
-pers/selton/vertx/datasearch/resource/UserResource.class
-pers/selton/vertx/datasearch/Router2ResteasyRequestAdapter.class
-pers/selton/vertx/inject/guice/modules/ApiModule.class
-pers/selton/vertx/service/Test.class
-pers/selton/vertx/inject/CommonUtils.class
-pers/selton/vertx/datasearch/ApiVerticle.class
-pers/selton/vertx/datasearch/ApiLaunch.class
