@@ -10,15 +10,24 @@
     <version>1.0.0</version>
     <modules>
         <module>vertx-api</module>
+        <module>vertx-base</module>
     </modules>
 
     <properties>
+        <vertx.version>3.5.4</vertx.version>
+
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <jdk.version>1.8</jdk.version>
         <encoding-format>UTF-8</encoding-format>
 
         <vertx-sample.version>1.0.0</vertx-sample.version>
-        <vertx.version>3.5.4</vertx.version>
+
+        <mybatis.version>3.4.6</mybatis.version>
+        <mybatis-guice.version>3.10</mybatis-guice.version>
+        <druid.version>1.1.12</druid.version>
+        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+
+        <guice.version>4.2.2</guice.version>
         <resteasy.version>3.6.0.Final</resteasy.version>
         <lombok.version>1.16.4</lombok.version>
         <guava.version>20.0</guava.version>
@@ -31,6 +40,13 @@
 <dependencyManagement>
 
     <dependencies>
+
+        <dependency>
+            <groupId>pers.selton.vertx</groupId>
+            <artifactId>vertx-base</artifactId>
+            <version>${vertx-sample.version}</version>
+        </dependency>
+
         <!-- vert.x -->
         <dependency>
             <groupId>io.vertx</groupId>
@@ -50,11 +66,18 @@
             <version>${resteasy.version}</version>
         </dependency>
 
+        <!--resteasy对json格式支持,无会报错-->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson2-provider</artifactId>
+            <version>${resteasy.version}</version>
+        </dependency>
+
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version>}</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -62,6 +85,28 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-guice</artifactId>
+            <version>${mybatis-guice.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
 
         <!-- log -->
@@ -83,7 +128,7 @@
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
-            <version>${disruptor.version>}</version>
+            <version>${disruptor.version}</version>
         </dependency>
 
         <!-- config -->
@@ -100,6 +145,12 @@
             <version>${apache.commons.commons-lang3.version}</version>
         </dependency>
 
+        <!-- inject -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${guice.version}</version>
+        </dependency>
 
     </dependencies>
 

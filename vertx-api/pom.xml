@@ -12,6 +12,12 @@
     <packaging>jar</packaging>
 
 <dependencies>
+
+    <dependency>
+        <groupId>pers.selton.vertx</groupId>
+        <artifactId>vertx-base</artifactId>
+    </dependency>
+
     <!-- vert.x -->
     <dependency>
         <groupId>io.vertx</groupId>
@@ -26,6 +32,11 @@
     <dependency>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-vertx</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jboss.resteasy</groupId>
+        <artifactId>resteasy-jackson2-provider</artifactId>
     </dependency>
 
     <!-- lombok -->
@@ -70,6 +81,29 @@
         <artifactId>commons-lang3</artifactId>
     </dependency>
 
+    <!-- inject -->
+    <dependency>
+        <groupId>com.google.inject</groupId>
+        <artifactId>guice</artifactId>
+    </dependency>
+
+    <!-- mybatis -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-guice</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
 </dependencies>
 
 </project>
