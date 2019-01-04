@@ -8,10 +8,7 @@ import pers.selton.vertx.inject.CommonUtils;
 import pers.selton.vertx.model.data.User;
 import pers.selton.vertx.service.IUserService;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -29,13 +26,20 @@ public class UserResource {
         this.userService = CommonUtils.getInstance(IUserService.class);
     }
 
+    @GET
+    @Path("/id/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getUser(@PathParam("id") long id){
+        userService.getUser(id);
+        return Response.status(OK).build();
+    }
+
     @POST
     @Path("/add")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addUser(User user){
-
-        log.info("user login {}", user);
         userService.addUser(user);
         return Response.status(OK).build();
     }

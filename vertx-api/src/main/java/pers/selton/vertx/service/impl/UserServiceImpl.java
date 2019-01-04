@@ -12,4 +12,14 @@ public class UserServiceImpl implements IUserService {
     public void addUser(User user) {
         log.info("success add user {}", user);
     }
+
+    @Override
+    public User getUser(long id) {
+        User user = new User();
+        user.setId(id);
+        user.setAge((int) id);
+        user.setName("testUserGet" + id);
+        log.info("user message get {}", user);
+        return user;
+    }
 }
