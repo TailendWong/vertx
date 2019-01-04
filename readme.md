@@ -108,13 +108,10 @@ mvn clean install
 
 * **Selton.zhao** - *初始化工作* - [Selton Blog](http://selton.cn/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## 证书
 
-该项目基于GPL开源协议 - 具体参见 [LICENSE.md](LICENSE.md)
+该项目基于GPL开源协议 - 具体参见 [LICENSE](https://github.com/seltonGitHub/vertx/blob/master/LICENSE)
 
 ## 声明
 
 * 来源于公司框架的熟悉,记录学习vert.x的点点滴滴
-
