@@ -8,8 +8,6 @@ import java.io.File;
 
 public class ConfigUtils {
 
-
-
     private static Config config;
 
     public static Config getConfig(String path){
