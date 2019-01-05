@@ -11,6 +11,10 @@ public class ApiLaunch {
 
     public static void main(String[] args) {
 
+
+
+
+
         String confPath = System.getProperty("appConfigPath");
         log.info("get appConfigPath -> {}", confPath);
         if (StringUtils.isNotEmpty(confPath)) {
